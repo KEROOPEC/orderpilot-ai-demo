@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafafa" />
+    <meta name="description" content="OrderPilot ช่วยจัดข้อความสั่งซื้อให้เป็นร่างออเดอร์ที่ตรวจสอบได้" />
+    <title>OrderPilot — จัดออเดอร์จากแชต</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./src/catalog.js"></script>
+    <script defer src="./src/scenarios.js"></script>
+    <script defer src="./src/domain.js"></script>
+    <script defer src="./src/demo-assistant.js"></script>
+    <script defer src="./src/store.js"></script>
+    <script defer src="./src/views.js"></script>
+    <script defer src="./src/main.js"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <a class="brand" href="#chat" aria-label="OrderPilot หน้าหลัก">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" focusable="false">
+              <path d="M6 8.5h20v15H6z" />
+              <path d="M10 13h12M10 17h8M10 21h5" />
+              <path d="m21 20 2 2 4-5" />
+            </svg>
+          </span>
+          <span class="brand-copy"><strong>OrderPilot</strong><small>จัดออเดอร์จากแชต</small></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="เมนูหลัก">
+          <button type="button" class="nav-link is-active" data-page="chat" aria-current="page">แชตจำลอง</button>
+          <button type="button" class="nav-link" data-page="products">สินค้า</button>
+          <button type="button" class="nav-link" data-page="history">ประวัติ</button>
+          <button type="button" class="nav-link" data-page="about">ข้อมูลโครงการ</button>
+        </nav>
+      </header>
+
+      <div class="demo-strip" role="note">
+        <span class="demo-dot" aria-hidden="true"></span>
+        <strong>โหมดทดลอง</strong>
+        <span class="demo-divider" aria-hidden="true"></span>
+        <span>ข้อมูลจำลองเท่านั้น · ไม่มีการเชื่อมต่อร้านค้าจริง</span>
+        <span class="demo-spacer"></span>
+        <span class="demo-ai"><span aria-hidden="true">✳</span> AI จำลอง</span>
+      </div>
+
+      <main id="app" tabindex="-1">
+        <section class="loading-state" aria-labelledby="loading-title">
+          <div class="loading-mark" aria-hidden="true">OP</div>
+          <div>
+            <h1 id="loading-title">กำลังเตรียมโต๊ะจัดออเดอร์</h1>
+            <p>บทสนทนาและรายการสินค้าตัวอย่างจะอยู่ตรงนี้</p>
+          </div>
+        </section>
+      </main>
+
+      <div id="status-region" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+    </div>
+  </body>
+</html>
